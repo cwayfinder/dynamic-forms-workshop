@@ -22,4 +22,8 @@ export class ClientFormComponent implements OnInit {
       'gender': 'male'
     });
   }
+
+  save() {
+    console.log(this.clientGroup.value);
+  }
 }
