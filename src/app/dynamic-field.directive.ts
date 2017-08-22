@@ -13,7 +13,7 @@ const types = {
 })
 export class DynamicFieldDirective implements OnInit {
 
-  @Input() config: any;
+  @Input('dynamicField') config: any;
 
   constructor(private container: ViewContainerRef,
               private resolver: ComponentFactoryResolver,
