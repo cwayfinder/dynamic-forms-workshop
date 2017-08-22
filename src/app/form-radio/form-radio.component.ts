@@ -9,10 +9,7 @@ import { FormGroup } from '@angular/forms';
 export class FormRadioComponent implements OnInit {
 
   @Input() group: FormGroup;
-
-  @Input() key: string;
-  @Input() label: string;
-  @Input() options: { value: string, label: string }[];
+  @Input() config: any;
 
   constructor() { }
 

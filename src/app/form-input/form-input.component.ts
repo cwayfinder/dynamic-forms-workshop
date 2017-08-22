@@ -8,10 +8,8 @@ import { FormGroup } from '@angular/forms';
 })
 export class FormInputComponent implements OnInit {
 
-  @Input() key: string;
-  @Input() label: string;
-  @Input() placeholder: string;
   @Input() group: FormGroup;
+  @Input() config: any;
 
   constructor() { }
 

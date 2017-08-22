@@ -1,13 +1,6 @@
 <form [formGroup]="clientGroup" (submit)="save()">
 
-  <app-form-input [group]="clientGroup" key="title" label="Title" placeholder="Title"></app-form-input>
-  <app-form-input [group]="clientGroup" key="firstName" label="First name" placeholder="First name"></app-form-input>
-  <app-form-input [group]="clientGroup" key="lastName" label="Last name" placeholder="Last name"></app-form-input>
-  <app-form-input [group]="clientGroup" key="company" label="Company" placeholder="Company"></app-form-input>
-  <app-form-input [group]="clientGroup" key="position" label="Position" placeholder="Position"></app-form-input>
-
-  <app-form-radio [group]="clientGroup" key="gender" label="Gender"
-                  [options]="[{value: 'male', label: 'Male'}, {value: 'female', label: 'Female'}]"></app-form-radio>
+  <ng-container dynamicField *ngFor="let fieldConfig of formConfig" [group]="clientGroup" [config]="fieldConfig"></ng-container>
 
   <button class="btn btn-primary pull-right">Submit</button>
 </form>
