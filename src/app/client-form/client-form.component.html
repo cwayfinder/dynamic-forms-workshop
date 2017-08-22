@@ -1,6 +1,6 @@
 <form [formGroup]="clientGroup" (submit)="save()">
 
-  <ng-container *ngFor="let fieldConfig of formConfig" [dynamicField]="fieldConfig"></ng-container>
+  <ng-container *ngFor="let field of fields" [dynamicField]="field"></ng-container>
 
   <button class="btn btn-primary pull-right">Submit</button>
 </form>

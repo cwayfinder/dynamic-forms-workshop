@@ -10,7 +10,7 @@ export class ClientFormComponent implements OnInit {
 
   clientGroup: FormGroup;
 
-  formConfig = [
+  fields = [
     {
       key: 'title',
       type: 'text',
