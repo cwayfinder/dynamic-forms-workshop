@@ -6,21 +6,8 @@
   <app-form-input [group]="clientGroup" key="company" label="Company" placeholder="Company"></app-form-input>
   <app-form-input [group]="clientGroup" key="position" label="Position" placeholder="Position"></app-form-input>
 
-  <fieldset class="form-group">
-    <label class="control-label">Gender</label>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="gender" value="male" formControlName="gender">
-        Male
-      </label>
-    </div>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="gender" value="female" formControlName="gender">
-        Female
-      </label>
-    </div>
-  </fieldset>
+  <app-form-radio [group]="clientGroup" key="gender" label="Gender"
+                  [options]="[{value: 'male', label: 'Male'}, {value: 'female', label: 'Female'}]"></app-form-radio>
 
   <button class="btn btn-primary pull-right">Submit</button>
 </form>
