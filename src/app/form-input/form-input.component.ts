@@ -10,9 +10,7 @@ export class FormInputComponent implements OnInit {
 
   @Input() group: FormGroup;
 
-  @Input() key: string;
-  @Input() label: string;
-  @Input() placeholder: string;
+  @Input() config: any;
 
   constructor() { }
 

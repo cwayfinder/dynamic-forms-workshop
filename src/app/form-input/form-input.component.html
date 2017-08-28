@@ -1,4 +1,7 @@
 <div class="form-group" [formGroup]="group">
-  <label [attr.for]="key">{{label}}</label>
-  <input [formControlName]="key" class="form-control" [id]="key" [placeholder]="placeholder">
+  <label [attr.for]="config.key">{{config.label}}</label>
+  <input [formControlName]="config.key"
+         class="form-control"
+         [id]="config.key"
+         [placeholder]="config.placeholder">
 </div>

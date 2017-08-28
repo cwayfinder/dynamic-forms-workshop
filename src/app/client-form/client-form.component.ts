@@ -10,6 +10,43 @@ export class ClientFormComponent implements OnInit {
 
   clientForm: FormGroup;
 
+  formConfig = [
+    {
+      key: 'title',
+      type: 'text',
+      label: 'Title',
+      placeholder: 'Title',
+    }, {
+      key: 'firstName',
+      type: 'text',
+      label: 'First name',
+      placeholder: 'First name',
+    }, {
+      key: 'lastName',
+      type: 'text',
+      label: 'Last name',
+      placeholder: 'Last name',
+    }, {
+      key: 'company',
+      type: 'text',
+      label: 'Company',
+      placeholder: 'Company',
+    }, {
+      key: 'position',
+      type: 'text',
+      label: 'Position',
+      placeholder: 'Position',
+    }, {
+      key: 'gender',
+      type: 'radio',
+      label: 'Gender',
+      options: [
+        { value: 'male', label: 'Male' },
+        { value: 'female', label: 'Female' },
+      ]
+    },
+  ];
+
   constructor(private builder: FormBuilder) { }
 
   ngOnInit() {
