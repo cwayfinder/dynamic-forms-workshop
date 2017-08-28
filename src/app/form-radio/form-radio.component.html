@@ -1,0 +1,9 @@
+<fieldset class="form-group" [formGroup]="group">
+  <label class="control-label">{{label}}</label>
+  <div *ngFor="let option of options" class="form-check">
+    <label class="form-check-label">
+      <input [formControlName]="key" type="radio" class="form-check-input" [name]="key" [value]="option.value">
+      {{option.label}}
+    </label>
+  </div>
+</fieldset>
